@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <!-- Anti-revoke DNS Settings -->
+        <key>PayloadContent</key>
+        <array>
+            <dict>
+                <key>DNSSettings</key>
+                <dict>
+                    <key>DNSProtocol</key>
+                    <string>HTTPS</string>
+                    <key>ServerURL</key>
+                    <string>https://apple.dns.nextdns.io/aff4ad</string>
+                </dict>
+                <key>PayloadDescription</key>
+                <string>Anti revoke + blacklist DNS settings</string>
+                <key>PayloadDisplayName</key>
+                <string>Anti revoke + blacklist DNS</string>
+                <key>PayloadIdentifier</key>
+                <string>com.example.antirevokeblacklistdns</string>
+                <key>PayloadType</key>
+                <string>com.apple.dnsSettings.managed</string>
+                <key>PayloadUUID</key>
+                <string>00008101-0003558A01E9A01E</string>
+                <key>PayloadVersion</key>
+                <integer>1</integer>
+            </dict>
+
+            <!-- Proxy Configuration to Simulate EU -->
+            <dict>
+                <key>PayloadType</key>
+                <string>com.apple.proxySettings.managed</string>
+                <key>PayloadVersion</key>
+                <integer>1</integer>
+                <key>PayloadUUID</key>
+                <string>00008101-0003558A01E9A01E-proxy</string>
+                <key>PayloadDisplayName</key>
+                <string>Proxy (EU Location)</string>
+                <key>PayloadIdentifier</key>
+                <string>com.example.proxy.eulocation</string>
+                <key>PayloadDescription</key>
+                <string>Proxy to simulate EU location</string>
+                <key>PayloadContent</key>
+                <dict>
+                    <key>ProxyType</key>
+                    <string>Manual</string>  <!-- Set proxy type as 'Manual' to directly configure the proxy -->
+                    <key>HTTPProxy</key>
+                    <string>proxy-server-eu.example.com</string> <!-- Replace with your EU-based proxy server -->
+                    <key>HTTPPort</key>
+                    <integer>8080</integer>  <!-- Replace with actual proxy server port -->
+                    <key>ProxyAuthenticationRequired</key>
+                    <false/> <!-- If your proxy doesn’t require authentication -->
+                </dict>
+            </dict>
+        </array>
+
+        <!-- Configuration meta-data -->
+        <key>PayloadDescription</key>
+        <string>Configuration to apply anti-revoke settings and simulate EU location</string>
+        <key>PayloadDisplayName</key>
+        <string>Anti-revoke + Proxy (EU Location)</string>
+        <key>PayloadOrganization</key>
+        <string>John220099</string>
+        <key>PayloadIdentifier</key>
+        <string>com.example.antirevokeblacklistproxy</string>
+        <key>PayloadRemovalDisallowed</key>
+        <false/>
+        <key>PayloadType</key>
+        <string>Configuration</string>
+        <key>PayloadUUID</key>
+        <string>00008101-0003558A01E9A01E-main</string>
+        <key>PayloadVersion</key>
+        <integer>1</integer>
+        <key>PayloadScope</key>
+        <string>System</string>   
+    </dict>
+</plist>
